@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; // hereda el estodo de la fuente
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5; // aplica mas para parrafos, en titulos el espacio es muy grande
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// input,
+// button,
+// textarea,
+// select {
+//   font: inherit;
+// }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; // sirve desbordar textos largos
+  // hyphens: auto; esto agrega giones al cortar una palabra
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}

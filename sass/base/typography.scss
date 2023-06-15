@@ -1,4 +1,18 @@
+@use '../abstracts' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 body {
   font-family: 'Josefin Sans', sans-serif;
+}
+h1 {
+  font-size: clamp(3rem, (1rem + 5vw), 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  p {
+    font-weight: 300;
+  }
+}
+p {
+  color: var(--clr-secondary);
 }

@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+.logo {
+  width: 7rem;
+  margin: var(--margin) 0;
+}

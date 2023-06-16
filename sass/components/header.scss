@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
-.logo {
+
+.header__image img {
   width: 7rem;
   margin: var(--margin) 0;
+  @include mq(medium) {
+    width: 11rem;
+  }
 }

@@ -1,4 +1,31 @@
+@use '../abstracts' as *;
+
 .grid {
   display: grid;
-  // gap: 2rem;
+  grid-template-areas:
+    'header'
+    'banner'
+    'content';
+  @include mq(medium) {
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      ' header  banner'
+      'content  banner';
+    justify-items: center;
+    align-items: center;
+    .header {
+      grid-area: header;
+      width: 446px;
+    }
+    .banner {
+      grid-area: banner;
+      justify-self: end;
+    }
+    .content {
+      grid-area: content;
+      width: min-content;
+      align-self: start;
+    }
+  }
 }

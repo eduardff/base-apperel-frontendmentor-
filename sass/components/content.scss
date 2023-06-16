@@ -5,23 +5,33 @@
   margin: calc(var(--margin) + 2rem) 0;
   display: flex;
   flex-direction: column;
-  // align-items: center;
   gap: var(--margin);
 
-  p:nth-child(2) {
-    max-width: 35ch;
-    font-size: 0.9em;
-    align-self: center;
-  }
   h1 {
     width: min-content;
     align-self: center;
   }
+  p {
+    max-width: 35ch;
+    font-size: 0.9em;
+    align-self: center;
+  }
+
   input {
     padding: 0.7em 1em;
     border-radius: 100vw;
     border: none;
     outline: 1px solid var(--clr-secondary);
     color: var(--clr-secondary);
+  }
+  @include mq(medium) {
+    text-align: left;
+    h1 {
+      align-self: start;
+    }
+    p {
+      max-width: 45ch;
+      font-size: 1em;
+    }
   }
 }

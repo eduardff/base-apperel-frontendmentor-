@@ -12,22 +12,24 @@
     <main class="wraper">
       <div class="grid">
         <!-- logo -->
-        <div class="logo">
-          <img src="logo.svg" alt="" />
+        <div class="header wraper-internal">
+          <div class="header__image">
+            <img src="logo.svg" alt="logo" />
+          </div>
         </div>
         <!--end -->
 
         <!-- banner -->
         <div class="banner">
           <picture>
-            <source media="(min-width: 40em)" srcset="hero-desktop.jpg" />
-            <img src="hero-mobile.jpg" alt="cover" />
+            <source media="(min-width: 65em)" srcset="hero-desktop.jpg" />
+            <img class="banner__img" src="hero-mobile.jpg" alt="cover" />
           </picture>
         </div>
         <!-- end -->
-        <div class="content">
+        <div class="content wraper-internal">
           <h1>
-            <p>We're</p>
+            <span>We're</span>
             coming soon
           </h1>
           <p>

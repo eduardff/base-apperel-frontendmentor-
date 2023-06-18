@@ -29,6 +29,19 @@ body {
 body {
   line-height: 1.5; // aplica mas para parrafos, en titulos el espacio es muy grande
   -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(
+    305deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(0deg 100% 100%) 2%,
+    hsl(0deg 100% 100%) 7%,
+    hsl(0deg 100% 99%) 13%,
+    hsl(0deg 100% 99%) 23%,
+    hsl(0deg 100% 99%) 35%,
+    hsl(0deg 100% 99%) 50%,
+    hsl(0deg 100% 98%) 66%,
+    hsl(0deg 100% 98%) 84%,
+    hsl(0deg 100% 98%) 100%
+  );
 }
 
 img,

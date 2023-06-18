@@ -24,7 +24,9 @@
     }
     .content {
       grid-area: content;
-      width: min-content;
+      // width: min-content;
+      width: 446px;
+
       align-self: start;
     }
   }

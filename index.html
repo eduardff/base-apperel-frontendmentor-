@@ -12,7 +12,7 @@
     <main class="wraper">
       <div class="grid">
         <!-- header -->
-        <div class="header wraper-internal">
+        <div class="header">
           <div class="header__image">
             <img src="logo.svg" alt="logo" />
           </div>
@@ -29,7 +29,7 @@
         <!-- end -->
 
         <!-- content -->
-        <div class="content wraper-internal">
+        <div class="content">
           <h1>
             <span>We're</span>
             coming soon
@@ -39,7 +39,25 @@
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-          <input type="text" placeholder="Email Address" />
+          <div class="input">
+            <form action="" id="form">
+              <input
+                id="input"
+                type="text"
+                placeholder="Email Address"
+                required
+              />
+              <button class="input__button">
+                <img src="icon-arrow.svg" alt="" />
+              </button>
+              <div class="input__error hidden" id="error-hidden">
+                <img src="icon-error.svg" alt="" />
+              </div>
+              <p class="input__alert hidden" id="alert-hidden">
+                Please provide a valid email
+              </p>
+            </form>
+          </div>
         </div>
         <!-- end -->
       </div>

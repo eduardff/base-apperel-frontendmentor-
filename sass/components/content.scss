@@ -17,12 +17,50 @@
     align-self: center;
   }
 
-  input {
-    padding: 0.7em 1em;
-    border-radius: 100vw;
-    border: none;
-    outline: 1px solid var(--clr-secondary);
-    color: var(--clr-secondary);
+  .input {
+    flex-grow: 100%;
+    position: relative;
+    text-align: left;
+    input {
+      padding: 0.7em 1em;
+      border-radius: 100vw;
+      border: none;
+      outline: 1px solid var(--clr-secondary);
+      color: var(--clr-secondary);
+      width: 100%;
+    }
+    &__error {
+      position: absolute;
+      right: 5rem;
+      top: 0.6em;
+      @include mq(medium) {
+        right: 7rem;
+      }
+    }
+    &__button {
+      cursor: pointer;
+      border-radius: 100vw;
+      width: 4rem;
+      height: 3rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(0, 93%, 68%);
+      position: absolute;
+      right: 0;
+      border: 1px solid hsl(0, 93%, 68%);
+      @include mq(medium) {
+        width: 6rem;
+      }
+
+      img {
+        width: 0.7em;
+        height: 1em;
+      }
+    }
+    &__alert {
+      margin: 0.5rem 0 0 1.5rem;
+    }
   }
   @include mq(medium) {
     text-align: left;

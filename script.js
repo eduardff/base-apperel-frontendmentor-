@@ -23,6 +23,21 @@ const checkEmail = () => {
   }
   return valid;
 };
+// funcion debounce
+const debounce = (fn, delay = 500) => {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      fn.apply(null, args);
+      // fn(...args)
+    }, delay);
+  };
+};
+const valid = debounce(checkEmail);
+
 const register = () => {
   $form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -33,5 +48,10 @@ const register = () => {
       console.log('incorrecto');
     }
   });
+  $form.addEventListener('input', (event) => {
+    valid(event.target.value);
+  });
 };
 export { register };
+
+// todo : volver a revisar los clusure y el debounce

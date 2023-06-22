@@ -43,7 +43,8 @@ const register = () => {
     event.preventDefault();
 
     if (checkEmail()) {
-      console.log('correcto');
+      // console.log('correcto');
+      alert('Correo Enviado');
     } else {
       console.log('incorrecto');
     }
